@@ -6,6 +6,8 @@ Puntajelvl3 = 0 //VARIABLE DE INICIO PUNTOS
 //DE POR SI ESTA FUNCION NO SE EJECUTA HASTA QUE SE LA LLAMA, MAS ADELANTE LA LLAMAREMOS
 //PARA QUE EL JUEGO INICIE UNA VEZ SE PRESIONE JUGAR
 function JUEGOlvl3() {
+    const botonPausar = document.getElementById("Pauselvl3");
+    botonPausar.style.display = "block";
 
     //FUNCION QUE REDUCE EL TIEMPO Y RESETEAL EL RESULTADO UNA VEZ LLEGUE A 0
     function Tiempo_Disminurlvl3() { 
@@ -29,17 +31,23 @@ function JUEGOlvl3() {
     //FUNCION QUE UNICAMENTE AUMENTA PUNTOS Y RESETEA LAS VARIABLES AL LLEGAR A CIERTO LIMITE
     function Aumentar_Puntoslvl3() {
         Puntajelvl3++;
-        document.getElementById("Puntajelvl3").innerHTML = Puntajelvl3 + " / 4"
-        if (Puntajelvl3 == 1) {
+        let puntajeParaGanar = 1
+        let lastTimeValue = Tiempolvl3;
+
+        // Valor de puntaje para ganar
+        let lastPuntajeValue = Puntajelvl2;
+
+        document.getElementById("Puntajelvl3").innerHTML = lastPuntajeValue + " / 4"
+        if (Puntajelvl3 == puntajeParaGanar) {
             Puntajelvl3 = 0
             Tiempolvl3 = 51
             function Contactos(){
             Swal.fire({
                 title : 'Felicitaciones por parte del <br> Grupo Omega<br><br><img src="IMG/Logo_Omega.png" width = "120px">',
-                html: '<b class="Aumentar puntos">Sabia que lo lograrias, nos salVaste de la destrucciÓn, pero ahora nos espera otra lucha, esperemos volVerte a ver jugando IRON FIST 2 en un futuro <br><br> CONTACTOS:<br><br> 71727432@certus.edu.pe <br><br> 71663265@certus.edu.pe <br><br> 70845813@certus.edu.pe <br> </b>',
+                html: '<b class="Aumentar puntos">Sabía que lo lograrías, nos salvaste de la destrucción, pero ahora nos espera otra lucha, esperemos volverte a ver jugando IRON FIST 2 en un futuro. <br><br> CONTACTOS:<br><br> 71727432@certus.edu.pe <br><br> 71663265@certus.edu.pe <br><br> 70845813@certus.edu.pe <br> </b>',
                 icon: 'sucess',
                 confirmButtonText: '<span id="Pausear_musica">De acuerdo</span>',
-                width: '50%',
+                width: swalWidth,
                 height: '80%',
                 timer: 100000,
                 
@@ -54,9 +62,26 @@ function JUEGOlvl3() {
             }
             setTimeout(Contactos, 15000)
 
-            
+            botonPausar.style.display = "none";
+            document.getElementById("Tiempolvl3").innerHTML = lastTimeValue
+            document.getElementById("Puntajelvl3").innerHTML = lastPuntajeValue+"&nbsp;/&nbsp;"+puntajeParaGanar
             document.getElementById("Fondo_Ciberpunk").pause()
             document.getElementById("Triunfo").play()
+            const replayGameButton = document.getElementById("replayGameButton");
+            
+            replayGameButton.style.display="block";
+            replayGameButton.addEventListener('click', Habilitar_Nuevamente_Juego)
+
+            function Habilitar_Nuevamente_Juego(){
+                replayGameButton.style.display='none';                
+                location.reload(true);
+                // nivel01Contenedor.parentNode.replaceChild(lvl1Clon, nivel01Contenedor)
+                // document.getElementById("NIVEL_01").style.display = "block"
+                // document.getElementById("NEXT").style.display='block';
+                // document.getElementById("NIVEL_02").style.display = "none"
+                // document.getElementById("NIVEL3").style.display = "none"
+
+            }
 
             function Ganaste_Pantallalvl3(){
             document.getElementById("Meteoritolvl3").style.left = "-70%"
@@ -258,6 +283,7 @@ function JUEGOlvl3() {
 
 
 //LE DECIMOS QUE AL PRESIONAR EL BOTON JUGAR EJECUTARA LA FUNCION PLAY     
+//document.getElementById("Playlvl3").addEventListener('click', PLAYlvl3)
 document.getElementById("Playlvl3").addEventListener('click', PLAYlvl3)
 
 //ESTE ES EL CONTEO DE LA CUENTA REGRESIVA QUE SE DA DESPUEZ DE PRESINAR JUGAR
@@ -266,16 +292,19 @@ Conteolvl3 = 4
 //ESTA FUNCION EJECUTA UN CONJUNTO DE ACCIONES AL PRESIONAR JUGAR
 function PLAYlvl3() {
     document.getElementById("Fondo_Ciberpunk").play()
+    document.getElementById("Startlvl3").style.display = "none"
     //MUEVE EL TITULO FUERA DEL CONTENEDOR UNA VEZ DE CLICK A JUGAR
     document.getElementById("Textolvl3").style.left = "-900px"
     //MUEVE AL BOTON PLAY TRANS PRESIONAR PRESIONAR AL MISMO BOTON
     document.getElementById("Playlvl3").style.left = "-900px"
     //MUEVE LA DIFICULTAD AL PRESIONAR JUGAR
     document.getElementById("Dificultadlvl3").style.left = "-900px"
+
+    
     function ARRACARlvl3(){    
         JUEGOlvl3()}
     //INVOCA AL JUEGO UNA VEZ PASEN 4 SEGUNDO - OSEA UNA VEZ TERMINE EL CONTADOR
-    tiempo_de_arranquelvl3 =  setTimeout(ARRACARlvl3, 4100)
+    tiempo_de_arranquelvl3 =  setTimeout(ARRACARlvl3, 3100)
     //ESTA FUNCION EJECUTA LA CUENTA REGRESIVA Y RETIRA LA PANTALLA START 
     function ESPERARlvl3() {
         function Cuenta_rglvl3() {
@@ -292,11 +321,12 @@ function PLAYlvl3() {
                 setTimeout(Borrarlvl3, 500)
             }
         }
+        Cuenta_rglvl3()
         setInterval(Cuenta_rglvl3, 1000)
     }
 
-    setTimeout(ESPERARlvl3, 350)
-} //SE EJECUTARA EN UN LAPSO DE 350, DESPUES DE PRESIONAR EL BOTON
+    ESPERARlvl3();
+}
 
 
 //ESTA FUNCION CONTIENE EL REANUDE Y PAUSE DEL BOTON
