@@ -550,3 +550,23 @@ function Reloj_Tiempo() {
 Reloj_Tiempo();
 
 setInterval(Reloj_Tiempo, 1000);
+
+var audio = document.getElementById("Fondo_Ciberpunk"); 
+var iconoVolumen = document.getElementById("icono-volumen");
+var controlVolumen = document.getElementById("control-volumen");
+
+iconoVolumen.addEventListener("click", function() {
+  if (audio.muted) {
+    audio.muted = false;
+    iconoVolumen.classList.remove("fa-volume-off");
+    iconoVolumen.classList.add("fa-volume-up");
+  } else {
+    audio.muted = true;
+    iconoVolumen.classList.remove("fa-volume-up");
+    iconoVolumen.classList.add("fa-volume-off");
+  }
+});
+
+controlVolumen.addEventListener("input", function() {
+  audio.volume = controlVolumen.value / 100;
+});
