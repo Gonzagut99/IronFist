@@ -45,14 +45,14 @@ function JUEGOlvl3() {
             Swal.fire({
                 title : 'Felicitaciones por parte del <br> Grupo Omega<br><br><img src="IMG/Logo_Omega.png" width = "120px">',
                 html: '<b class="Aumentar puntos">Sabía que lo lograrías, nos salvaste de la destrucción, pero ahora nos espera otra lucha, esperemos volverte a ver jugando IRON FIST 2 en un futuro. <br><br> CONTACTOS:<br><br> 71727432@certus.edu.pe <br><br> 71663265@certus.edu.pe <br><br> 70845813@certus.edu.pe <br> </b>',
-                icon: 'sucess',
+                icon: 'success',
                 confirmButtonText: '<span id="Pausear_musica">De acuerdo</span>',
                 width: swalWidth,
                 height: '80%',
                 timer: 100000,
                 
                 
-                timerProgressbar: true,
+                timerProgressBar: true,
                 /*Funcion de cerrar la alerta*/
                 allowOutsideClick: true,
                 allowEscapeKey: false,
