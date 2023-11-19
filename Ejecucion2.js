@@ -92,13 +92,13 @@ function JUEGOlvl2() {
         title:
           'FELICIDADES POR SUPERAR <br> EL NIVEL <br><br> <img src="IMG/Check.png" width = "120px"><br>',
         html: "¿VERDAD QUE FUÉ DIFÍCIL? Prepárate para el siguiente nivel que las cosas van a empeorar. Agradecemos tu dedicación en pasar este nivel, esperemos que puedas seguir defendiendo la tierra de esa manera y mejores tu habilidad de reacción.",
-        icon: "sucess",
+        icon: "success",
         confirmButtonText: "QUIERO CONTINUAR",
         width: swalWidth,
         height: "80%",
         timer: 100000,
 
-        timerProgressbar: true,
+        timerProgressBar: true,
         /*Funcion de cerrar la alerta*/
         allowOutsideClick: true,
         allowEscapeKey: false,

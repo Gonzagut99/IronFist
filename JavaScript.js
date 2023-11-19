@@ -1,3 +1,19 @@
+//REGLAS
+let zoomLevel = 1;
+
+function zoom(event) {
+    event.preventDefault();
+
+    // Ajusta el nivel de zoom según la dirección de la rueda del mouse
+    zoomLevel += event.deltaY * -0.01;
+
+    // Limita el nivel de zoom a un rango específico si es necesario
+    zoomLevel = Math.min(Math.max(0.5, zoomLevel), 3);
+
+    // Aplica el nivel de zoom utilizando la propiedad de transformación
+    document.getElementById('Reglas').style.transform = `scale(${zoomLevel})`;
+}
+
 // Obtén el ancho de la pantalla para mostrar los popups con un ancho adecuado
 let swalWidth= ()=>{
     const anchoPantalla = window.innerWidth;
@@ -9,13 +25,13 @@ Swal.fire({
     title:
       '¿Preparado para salvar el mundo? <br><br> <img src="IMG/planeta_tierra.png" width = "120px"><br>',
     html: '"Iron Fist” es un juego diseñado para mejorar tus reflejos con cada nivel que superes. Cada avance te presenta desafíos cada vez mayores, desbloqueando logros significativos al final de cada etapa. Esperamos que te diviertas y disfrutes de la emoción que este increíble juego tiene para ofrecer.',
-    icon: "sucess",
+    icon: "success",
     confirmButtonText: "ESTOY PREPARADO",
     width: swalWidth,
     height: "80%",
     timer: 100000,
   
-    timerProgressbar: true,
+    timerProgressBar: true,
     /*Funcion de cerrar la alerta*/
     allowOutsideClick: true,
     allowEscapeKey: false,
@@ -33,7 +49,7 @@ document
   .getElementById("Contenedor_narracion")
   .addEventListener("click", Iniciar_narracion);
 
-function Iniciar_narracion() {
+function _narracion() {
   if (Narracion == 1) {
     document.getElementById("narracion").play();
     document.getElementById("VOLUMEN").style.display = "none";
@@ -61,7 +77,7 @@ function Graficos_fondo() {
     document.getElementById("Fondo").style.backgroundSize = "100% 120%";
     Graficos = 2;
   } else {
-    document.getElementById("Recursos").style.marginLeft = "0%";
+    document.getElementById("Recursos").style.marginLeft = "60%";
     document.getElementById("Fondo").style.backgroundImage =
       "url(IMG/Fondo_Espacio.gif) ";
     Graficos = 1;
@@ -74,17 +90,14 @@ function Graficos_fondo() {
 function JUEGO() {
     const botonPausar = document.getElementById("Pause");
     botonPausar.style.display = "block";
-  function Tiempo_Disminur() {
-    //FUNCION QUE REDUCE EL TIEMPO Y RESETEAL EL RESULTADO UNA VEZ LLEGUE A 0
-    Tiempo--;
-    document.getElementById("Tiempo").innerHTML = Tiempo + " seg.";
-    if (Tiempo == 0) {
-      Tiempo = 71;
-      Puntaje = 0;
-      document.getElementById("Perdiste_sound").play();
-      alert("Lo lamento perdiste");
+
+    function PAUSE() {
+      //FUNCION QUE PONE EN PAUSA EL JUEGO
+      clearInterval(Reanudar_trayectoria);
+      clearInterval(Reanudar_trayectoria2);
+      document.getElementById("Boton_Play").style.display = "block";
+      document.getElementById("Boton_Pausa").style.display = "none";
     }
-  }
 
   Restar_Tiempo = setInterval(Tiempo_Disminur, 1000);
 
@@ -128,6 +141,9 @@ function JUEGO() {
       document.getElementById("GANASTE_PANTALLA").style.display = "flex";
 
       function Ganaste_Pantalla() {
+        document.getElementById("Meteiorito").style.transition = "0.5s";
+        document.getElementById("Meteiorito2").style.transition = "0.5s";
+
         clearInterval(Reanudar_trayectoria);
         clearInterval(Reanudar_trayectoria2);
         clearInterval(Restar_Tiempo);
@@ -135,8 +151,8 @@ function JUEGO() {
         document.getElementById("Meteiorito").style.left = "-70%";
         document.getElementById("Meteiorito").style.transition = "0s";
 
-        document.getElementById("Meteiorito2").style.left = "-70%";
-        document.getElementById("Meteiorito2").style.transition = "0s";
+        document.getElementById("Meteorito2").style.left = "-70%";
+        document.getElementById("Meteorito2").style.transition = "0s";
       }
 
       Desbloquear_Pantalla = setInterval(Ganaste_Pantalla, 1);
@@ -145,13 +161,13 @@ function JUEGO() {
         title:
           'FELICIDADES POR SUPERAR <br> EL NIVEL <br><br> <img src="IMG/Check.png" width = "120px"><br>',
         html: "Al parecer nos salvamos, agradecemos tu ayuda y ezfuerzo al superar este nivel. Esperamos seguir contando contigo si algo mas sucede, y por cierto, no olvides que te esperan grandes cosas al final del juego, asi que no pares de intentar.",
-        icon: "sucess",
+        icon: "success",
         confirmButtonText: "QUIERO CONTINUAR",
         width: swalWidth,
         height: "80%",
         timer: 100000,
 
-        timerProgressbar: true,
+        timerProgressBar: true,
         /*Funcion de cerrar la alerta*/
         allowOutsideClick: true,
         allowEscapeKey: false,
@@ -193,28 +209,35 @@ function JUEGO() {
     .getElementById("Meteiorito2")
     .addEventListener("mouseover", Explulsar2);
 
-  //ESTA ES LA FUNCION QUE EXPULSA AL METIRITO 1 DE MANERA ALEATORIA FUERA DEL MAPA
-  function Explulsar() {
+//ESTA ES LA FUNCION QUE EXPULSA AL METIRITO 1 DE MANERA ALEATORIA FUERA DEL MAPA
+function Explulsar() {
+  //Verificamos si el elemento de audio existe
+  if (document.getElementById("Puntos_sound")) {
     document.getElementById("Puntos_sound").play();
-    Distancia = "-500";
-    Altura = Math.round(Math.random() * 450);
-
-    document.getElementById("Meteiorito").style.left = Distancia + "px";
-    document.getElementById("Meteiorito").style.top = Altura + "px";
-    document.getElementById("Meteiorito").style.transition = "1.8s";
   }
 
-  //ESTA ES LA FUNCION QUE EXPULSA AL METIRITO 2 DE MANERA ALEATORIA FUERA DEL MAPA
-  function Explulsar2() {
+  Distancia = "-500";
+  Altura = Math.round(Math.random() * 450);
+
+  document.getElementById("Meteiorito").style.left = Distancia + "px";
+  document.getElementById("Meteiorito").style.top = Altura + "px";
+  document.getElementById("Meteiorito").style.transition = "1.8s";
+}
+
+//ESTA ES LA FUNCION QUE EXPULSA AL METIRITO 2 DE MANERA ALEATORIA FUERA DEL MAPA
+function Explulsar2() {
+  //Verificamos si el elemento de audio existe
+  if (document.getElementById("Punto2")) {
     document.getElementById("Punto2").play();
-    Distancia = "-500";
-    Altura = Math.round(Math.random() * 450);
-
-    document.getElementById("Meteiorito2").style.left = Distancia + "px";
-    document.getElementById("Meteiorito2").style.top = Altura + "px";
-    document.getElementById("Meteiorito2").style.transition = "1.8s";
   }
 
+  Distancia = "-500";
+  Altura = Math.round(Math.random() * 450);
+
+  document.getElementById("Meteiorito2").style.left = Distancia + "px";
+  document.getElementById("Meteiorito2").style.top = Altura + "px";
+  document.getElementById("Meteiorito2").style.transition = "1.8s";
+}
   //ESTA FUNCION SE ENCARGA DE ALERTARTE UNA VEZ EL METIORITO CRUZE LA LINEA CON UN PERDISTE
   //TAMBIEN RESETEA LOS VALORES Y LLEVA A LOS METIORITOS FUERA DEL MAPA DE MANERA INSTANTANEA
   function perdiste() {
@@ -329,17 +352,15 @@ function DETENER_JUEGO() {
       document.getElementById("Pausa_Pantalla").style.display = "none";
       document.getElementById("Fondo_Ciberpunk").play();
       function Tiempo_Disminur() {
-        //VOLVEMOS A CREAR LA FUNCION DE TIEMPO PARA QUE REANUEDE EL CONTEO
         Tiempo--;
         document.getElementById("Tiempo").innerHTML = Tiempo;
         if (Tiempo == 0) {
-          Tiempo = 71;
+          Tiempo = 0;
           Puntaje = 0;
           document.getElementById("Perdiste_sound").play();
           alert("Lo lamento perdiste");
           document.getElementById("Meteiorito").style.left = "-70%";
-          document.getElementById("Meteiorito").style.transition = "0s"; //CREAR UNA FUNCION EN BASE A ESTO Y PASAR COMO REANUDAR EN GANASTE
-
+          document.getElementById("Meteiorito").style.transition = "0s";
           document.getElementById("Meteiorito2").style.left = "-70%";
           document.getElementById("Meteiorito2").style.transition = "0s";
         } else {
@@ -550,3 +571,45 @@ function Reloj_Tiempo() {
 Reloj_Tiempo();
 
 setInterval(Reloj_Tiempo, 1000);
+
+//Calculamos las dimensiones del juego
+var ancho = window.clientWidth;
+var alto = window.clientHeight;
+
+//Creamos el canvas
+var canvas = document.createElement("canvas");
+canvas.width = ancho;
+canvas.height = alto;
+
+//Agregamos el canvas al documento
+document.body.appendChild(canvas);
+
+//Creamos el contexto del canvas
+var ctx = canvas.getContext("2d");
+
+//Dibujamos el juego
+ctx.fillStyle = "black";
+ctx.fillRect(0, 0, ancho, alto);
+
+//Creamos la nave
+var nave = new Nave(ancho, alto);
+
+//Arrancamos el juego
+inicio();
+
+//Evento de mousedown
+canvas.addEventListener("mousedown", function(event) {
+  //Obtenemos las coordenadas del mouse
+  var x = event.offsetX;
+  var y = event.offsetY;
+
+  //Calculamos el factor de zoom
+  var zoom = 1 + (y / 100);
+
+  //Ajustamos el tamaño del canvas
+  canvas.width *= zoom;
+  canvas.height *= zoom;
+
+  //Recalculamos el juego
+  recalcularJuego();
+});

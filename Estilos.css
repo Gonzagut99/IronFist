@@ -13,1193 +13,1665 @@ background-size: 100% 120%;
                                                                     CONTENEDOR*/
 
 /*PRIMERA SECCION------------------------------------------------------------------------------------------------------*/
-
-.Contenedor_RC {
+  
+  .Contenedor_RC {
     width: 7vw;
-    height: 3vw; 
+    height: 3vw;
     /* min-height: fit-content;  */
-    border-radius: 3rem; 
-    background: transparent; 
-    border: 3px solid white; 
+    border-radius: 3rem;
+    background: transparent;
+    border: 3px solid white;
     position: relative;
-    left: 44%; 
-    top: 4%; 
+    left: 44%;
+    top: 4%;
     cursor: pointer;
-}
-
-.Recursos {
-    width: 40%; 
+  }
+  
+  .Recursos {
+    width: 40%;
     height: 100%;
     min-height: 12px;
     min-width: 12px;
-    border-radius: 50%; 
-    background: white; 
-    margin-left: 0%; 
+    border-radius: 50%;
+    background: white;
+    margin-left: auto;
     transition: 1s;
-}
-/*PRIMERA SECCION------------------------------------------------------------------------------------------------------*/
-
+  }
+  
 .Seccion_01{width: 100%; height: 100vh; overflow: hidden; position: relative; top: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center;}/*ESTE ES EL CONTENEDOR DE
                                                                                             LA SECCION 01*/
-
-.Texto_Principal { /*ESTE ES EL TITULO DE IRON FIST*/
-    font-family: 'Press Start 2P', cursive; text-align: center;
-    font-size: 3.8vw;
+  
+  .Texto_Principal {
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
+    font-size: 3.8rem;
     position: relative;
     top: -12%;
-}
-
-.Nombre{ /*ESTE ES LA PREGUNTA DEBAJO DEL NOMBRE*/
-    font-family: 'Press Start 2P', cursive; text-align: center;
-    font-size: 5.9vw;
+  }
+  
+  .Nombre {
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
+    font-size: 5.9rem;
     position: relative;
-    top: 0%;
-    padding-bottom: 0%;
-
-}
-
-.Boton {
+    top: 0;
+    padding-bottom: 0;
+  }
+  
+  .Boton {
     padding: 20px 120px;
     width: fit-content;
     height: fit-content;
     display: flex;
     align-items: center;
     border-radius: 12px;
-    background: rgb(144, 90, 196); /*Este es el boton de JUGAR*/
-    border: 2px solid rgb(159, 120, 195);
+    background: var(--color-primary);
+    border: 2px solid var(--color-border);
     cursor: pointer;
     font-family: 'Press Start 2P', cursive;
-    color: white; 
-    margin-left: auto; 
-    margin-right: auto; 
-    margin: auto; 
-    margin-top: -3%; 
-    &:hover{
-        background: rgb(115, 44, 181); 
-    };
-    &:active{
-        background: rgb(107, 30, 179);
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -3%;
+  
+    &:hover {
+      background: var(--color-hover);
     }
-}
-
-@media screen and (max-width: 800px){
-    .Seccion_01{
-        justify-content: start;
-        gap: 24px 0px;
+  
+    &:active {
+      background: var(--color-active);
     }
-    .Texto_Principal{
-        position: static;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .Seccion_01 {
+      justify-content: start;
+      gap: 24px 0;
     }
-    .Nombre{
-        position: static;
-        margin-top: 50px;
+  
+    .Texto_Principal,
+    .Nombre {
+      position: static;
+      margin-top: 10px;
     }
-    .Boton{
-        margin: 0;
-        margin-top: 50px;
+  
+    .Boton {
+      margin: 0;
+      margin-top: 20px;
     }
-}
-
-/*SECCION REGLAS ------------------------------------------------------------------------------------------------------*/
-
-
-
-#Reglas{position: relative; width: 100%; top: 120%;}
-
-.Titulo_Reglas{font-size: 2.4VW; position: relative; top: -20%; left: 2%; font-family: 'Press Start 2P', cursive;}
-
-.Img_reglas {margin-top: 1%; margin-left: 2%; width: 34%}
-
-.Reglas_estilos {background: rgba(248, 248, 248, 0.521); color: black; border: 0.19vw solid black; 
-width: 40%; height: auto; position: absolute;   left: 58% ; font-size: 1.14vw;}
-
-#R1 {top: -4%;}
-#R2 {top: 38%;}
-#R3_4 {top: 75%;}
-.Reglas_estilos h3  {margin-left: 3%; margin-right: 3%; text-align: center;} 
-.Reglas_estilos p  {margin-left: 3%; margin-right: 3%; text-align: center;} 
-
-.Listo {width: 34%; height: 8vh; background: rgb(100, 21, 146); display: flex; 
-align-items: center; justify-content: center; cursor: pointer; position: relative; left: 2%; top: 2vw; font-size: 1.5vw;
-font-family: 'Inconsolata', monospace;}
-
-@media screen and (max-width: 800px){
-    #Reglas{
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        padding: 0px 12px;
-        gap: 4px 0px;
-    }
-    .Titulo_Reglas{
-        font-size: 20px;
-        text-align: center;
-    }
-    .Titulo_Reglas br{
-        display: none;
-    }
-    .Img_reglas{
-        margin-top: 0;
-        margin-left: 0;
-        width: 100%;
-    }
-    .Reglas_estilos{
-        width: 100%;
-        position: static;
-        font-size: 12px;
-        border-radius: 8px;
-    }
-    .Listo{
-        width: 100%;
-        left: 0;
-        font-size: 20px;
-        border-radius: 8px;
-    }
-}
-
-
-
-/*SEGUNDA SECCION------------------------------------------------------------------------------------------------------*/
-
-#Seccion_2 {position: relative; top: 10%;}/*Este es el contenedor de laseccion 2*/
-
-.Titulo_historia{font-family: 'Press Start 2P', cursive; /*ESTE ES EL TITULO DE LA SEGUNDA SECCION*/
-text-align: left; font-size: 40px; position: absolute; 
-left: -100%;}
-
-.Imgane_metiorito{position: absolute; top: 210px; left: -100%; width:600px}/*ESTA ES LA IMAGEN DEL METIORITO CALLENDO A LA TIERRA*/
-
-.Contenedor_Historia{width: 40%;     /*ESTE ES EL CONENTENEDOR DE LA HISTORIA*/
-background: rgba(255, 255, 255, 0.659);
-color: black; padding-top: 2%; padding-right: 2%;
-padding-left: 2%; padding-bottom: 2%; float: right;
-position: relative; right: 100%; top: 194px;}
-
-.Boton_preparado{
-    width: 70%; 
-    height: 6vh; /*ESTE ES EL BOTON DE LA HISTORIA*/
-    background: black; 
-    display: flex; 
-    font-size: 1.2vw;
-    justify-content: center; 
+  }
+  
+  /* SECCION REGLAS ------------------------------------------------------------- */
+  #Reglas {
+    position: relative;
+    width: 100%;
+    top: 120%;
+  }
+  
+  .Titulo_Reglas {
+    font-size: 2.4rem;
+    position: relative;
+    top: -20%;
+    left: 2%;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .Img_reglas {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 34%;
+  }
+  
+  .Reglas_estilos {
+    background: var(--color-bg-reglas);
+    color: black;
+    border: 0.19rem solid var(--color-border);
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 35%;
+    font-size: 1.14rem;
+  }
+  
+  #R1 {
+    top: -4%;
+  }
+  
+  #R2 {
+    top: 38%;
+  }
+  
+  #R3_4 {
+    top: 75%;
+  }
+  
+  .Reglas_estilos h3,
+  .Reglas_estilos p {
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: justify;
+  }
+  
+  .Listo {
+    width: 34%;
+    height: 8vh;
+    background: var(--color-listo-bg);
+    display: flex;
     align-items: center;
-    cursor: pointer; 
-    color: white; 
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    left: 2%;
+    top: 2rem;
+    font-size: 1.5rem;
+    font-family: 'Inconsolata', monospace;
+  }
+  
+  /* Media Query para pantallas más pequeñas (max-width: 800px) */
+  @media screen and (max-width: 800px) {
+    #Reglas {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      gap: 4px;
+    }
+  
+    .Titulo_Reglas {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .Titulo_Reglas br {
+      display: none;
+    }
+  
+    .Img_reglas {
+      margin-top: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .Reglas_estilos {
+      width: 100%;
+      position: static;
+      font-size: 1rem;
+      border-radius: 0.8rem;
+    }
+  
+    .Listo {
+      width: 100%;
+      left: 0;
+      font-size: 2rem;
+      border-radius: 0.8rem;
+    }
+  }
+  
+
+/* SEGUNDA SECCION ----------------------------------------------------------- */
+#Seccion_2 {
+    position: relative;
+    top: 10%; /* Adjust the top position as needed */
+  }
+  
+  /* Este es el titulo de la segunda seccion */
+  .Titulo_historia {
+    font-family: 'Press Start 2P', cursive;
+    text-align: left;
+    font-size: 2rem; /* Use rem units for better responsiveness */
+    position: absolute;
+    left: -100%;
+    width: 100%; /* Make the title take full width */
+  }
+  
+  /* Esta es la imagen del meteorito cayendo a la tierra */
+  .Imgane_metiorito {
+    position: absolute;
+    top: 210px;
+    left: -100%;
+    width: 80%; /* Use percentages for better adaptability */
+    border-radius: 8px; /* Add border-radius for a rounded appearance */
+  }
+  
+  /* Este es el contenedor de la historia */
+  .Contenedor_Historia {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.659);
+    color: black;
+    padding: 2%; /* Use consistent padding values */
+    position: relative;
+    right: 100%;
+    top: 194px;
+    border-radius: 8px; /* Add border-radius for a rounded appearance */
+  }
+  
+  /* Este es el boton de la historia */
+  .Boton_preparado {
+    width: 70%;
+    height: 6vh;
+    background: #212121; /* Use hexadecimal color code for consistency */
+    display: flex;
+    font-size: 1.2vw;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
     font-family: 'Inconsolata', monospace;
     border-radius: 12px;
-    &:hover{
-        background: rgb(41, 41, 41);
+  
+    /* Hover and active states */
+    &:hover {
+      background: rgb(41, 41, 41);
     }
-    &:active{
-        background: rgb(61, 61, 61);
+  
+    &:active {
+      background: rgb(61, 61, 61);
     }
- }
-
-.Boton_Reproductor{
+  }
+  
+  /* Contenedor de botones de reproducción */
+  .Boton_Reproductor {
     display: flex;
     gap: 4px 0px;
     flex-direction: column;
     align-items: center;
-}
-.Contenedor_narracion {
-    width: 6vh; 
-    height: 6vh; 
-    background: black; 
-    color: white; 
+  }
+  
+  /* Botón de narración */
+  .Contenedor_narracion {
+    width: 6vh;
+    height: 6vh;
+    background: black;
+    color: white;
     border-radius: 0.5rem;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    cursor: pointer; 
-    &:hover{
-        background: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  
+    /* Hover and active states */
+    &:hover {
+      background: rgb(41, 41, 41);
     }
-    &:active{
-        background: rgb(61, 61, 61);
+  
+    &:active {
+      background: rgb(61, 61, 61);
     }
-}
-#VOLUMEN{font-size: 90%; }
-#PAUSE {display: none;}
-.BOTONES_2 {
-    display: flex; 
+  }
+  
+  /* Volumen */
+  #VOLUMEN {
+    font-size: 90%;
+  }
+  
+  /* Pause button */
+  #PAUSE {
+    display: none;
+  }
+  
+  /* Contenedor de botones */
+  .BOTONES_2 {
+    display: flex;
     gap: 1rem;
     justify-content: center;
-    align-items: start;  
-    margin-top: 4%; 
-    height: fit-content; 
-    width: 100%; 
+    align-items: start;
+    margin-top: 4%;
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  @media screen and (max-width: 800px) {
+    #Seccion_2 {
+      box-sizing: border-box;
+      display: flex !important;
+      flex-direction: column;
+      padding: 0px 12px;
+      gap: 8px 0px;
+    }
+  
+    .Titulo_historia {
+      position: static;
+      font-size: 2rem; /* Use rem units for better responsiveness */
+      text-align: center;
+      width: 100%;
+    }
+  
+    .Imgane_metiorito {
+      position: static;
+      width: 100%; /* Adjust width for smaller screens */
+      border-radius: 8px;
+    }
+  
+    .Contenedor_Historia {
+      width: 100%; /* Adjust width for smaller screens */
+      right: 0; /* Align to the right on smaller screens */
+      top: 0; /* Align to the top on smaller screens */
+    }
+  }
+  
+
+/* TERCERA SECCION ----------------------------------------------------------- */
+
+/* Titulo de Jugar */
+.Titulo-Jugar {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem; /* Use rem units for better responsiveness */
+    position: relative;
+    top: 0%;
+    left: -110%;
+    padding-bottom: 2%;
+  }
+  
+  /* Titulo del Juego 5 */
+  .Tituloar_Juego_5 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 1.5rem; /* Use rem units for better responsiveness */
+    margin-block: 0;
+    margin-bottom: 4px;
+  }
+  
+  /* Contenedor Mensaje Star */
+  .Contenedor_Mensaje_Star {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 2.3s;
+  }
+  
+  /* Fondo de la Sección Principal */
+  .Seccion_Juego {
+    width: 100%;
+    height: 140vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: -22%;
+    left: -100%;
+    transition: 2s;
+  }
+  
+  /* Estilos dentro del contenedor del Juego Nivel 1 */
+  .Contenedor {
+    width: 800px;
+    height: 400px;
+    border: 5px dashed green;
+    background: url(IMG/Fondo.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    top: 4%;
+    overflow: hidden;
+  }
+  
+  /* Cabecera dentro del Juego */
+  .Cabezera {
+    height: 70px;
+    border: 5px dashed green;
+    background: rgba(255, 255, 255, 0.65);
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Pantalla Start del inicio del juego */
+  .Start {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.582);
+    position: absolute;
+    top: 0%;
+    z-index: 100000000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Botón de la pantalla Start */
+  .Play {
+    background: green;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    justify-content: center;
+    cursor: pointer;
+    transition: 2s;
+    font-family: 'Press Start 2P', cursive;
+    margin: auto;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+  
+  /* Título central de Start */
+  .Texo {
+    font-size: 1rem;
+    left: 0px;
+    transition: 2s;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 70px;
+    margin-top: 0%;
+  }
+  
+  /* Pollo */
+  .Pollo {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    align-items: center;
+  }
+  
+  #Contenedor_contador {
+    height: 100%;
+    display: table;
+    position: absolute;
+  }
+  
+  /* Estilos de los números del conteo en Start */
+  #RGB {
+    font-size: 2.2rem;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  /* Mensaje responsivo */
+  
+  @media screen and (max-width: 600px) {
+    .Contenedor {
+      width: 500px;
+      height: 350px;
+    }
+    .Cabezera {
+      height: fit-content;
+      padding: 8px 0px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    /* Seccion_Juego */
+    .Seccion_Juego {
+      top: -32%;
+    }
+  
+    /* Titulo pantalla juego */
+    .Tituloar_Juego_5 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+  
+    /* Canvas */
+    .Contenedor {
+      width: 340px;
+      height: 180px;
+    }
+    .Cabezera {
+      height: fit-content;
+      padding: 8px 0px;
+    }
+    .Texo {
+      padding-top: 12px;
+      line-height: 14px;
+      font-size: 12px;
+    }
+    .Pollo {
+      font-size: 10px;
+    }
+    .Play {
+      font-size: 12px;
+    }
+    #RGB {
+      font-size: 50px;
+    }
+  }
+  
+  /* PANTALLA DE PAUSE */
+  .Pausa_Pantalla {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.541);
+    text-align: center;
+    z-index: 1000000000;
+    display: none;
+  }
+  
+  /* GANASTE PANTALLA */
+  .GANASTE_PANTALLA {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 255, 57, 0.63);
+    z-index: 900;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+  }
+  
+  .GANASTE_PANTALLA h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(10, 90, 16);
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .GANASTE_PANTALLA h3 {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: rgb(0, 0, 0);
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  #Sin_Audio {
+    display: none;
+    font-size: 20px;
+    color: white;
+  }
+  
+  #Ganaste_audio {
+    font-size: 20px;
+    color: white;
+  }
+  
+  /* Estilos generales de los meteoritos */
+  .Meteiorito {
+    cursor: pointer;
+    display: table;
+    position: absolute;
+    z-index: 1000;
+  }
+  
+  /* Estilos individuales de mis dos meteoritos */
+  #Meteiorito {
+    position: absolute;
+    top: 0px;
+    left: -10%;
+    transition: 2.4s;
+  }
+  
+  #Meteiorito2 {
+    position: absolute;
+    top: 0px;
+    left: -10%;
+    transition: 2.4s;
+  }
+  
+  /* Estilo del Planeta */
+  .Planeta {
+    position: absolute;
+    top: 12%;
+    left: 80%;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Estilo del límite en el juego */
+  .Limite {
+    height: 100%;
+    width: 50px;
+    border-left: 5px dashed white;
+    position: absolute;
+    top: 0%;
+    left: 70%;
+  }
+  
+  /* Estilos del span y del texto de tiempo */
+  .Tiempo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 14%;
+    height: 70%;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    line-height: 1vh;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  /* Estilos del span y del texto de puntaje */
+  .Puntaje {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 14%;
+    height: 70%;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    line-height: 7px;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  /* Estilos del botón de pause */
+  .Pause {
+    width: fit-content;
+    height: 70%;
+    font-size: 14px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 46%;
+  }
+  
+  /* Mensaje dentro de pause */
+  .Mensaje_Pause {
+    font-size: 50px;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .NEXT {
+    width: 15vw;
+    height: 3vw;
+    background: purple;
+    font-size: 0.9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    float: right;
+    margin-left: 12%;
+    font-size: 12px;
+    height: fit-content;
+    padding: 0px 12px;
+    border-radius: 8px;
+  }
+  
+  .Contenedor_LVL {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    position: relative;
+    top: 4%;
+  }
+  
+  .Nada {
+    width: 45vw;
+    height: auto;
+    background: rgba(191, 44, 228, 0.274);
+    border: 2px solid purple;
+    color: white;
+    position: relative;
+    left: 6%;
+  }
+  
+  .Nada h2 {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 16px;
+  }
+  
+  .Nada p {
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width: 750px) {
+    /* Instrucciones y hora */
+    .Contenedor_LVL {
+      flex-direction: column;
+      top: 2%;
+      gap: 20px;
+      align-items: center;
+    }
+    .Nada {
+      width: 85%;
+      left: 0%;
+    }
+    .Nada h2 {
+      font-size: 16px;
+    }
+    .Nada p {
+      font-size: 12px;
+    }
+    .NEXT {
+      margin-left: 0;
+      font-size: 12px;
+      height: fit-content;
+      width: 80%;
+      padding: 0px 12px;
+      border-radius: 8px;
+    }
+  
+    /* Mensaje de pausa */
+    .Mensaje_Pause {
+      font-size: 32px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    /* Cabecera y puntaje */
+    .Cabezera {
+      display: flex;
+      justify-content: space-around;
+    }
+    .Tiempo {
+      width: fit-content;
+      font-size: 8px;
+    }
+    .Puntaje {
+      width: fit-content;
+      font-size: 8px;
+    }
+    .Pause {
+      width: fit-content;
+      padding: 2px 12px;
+      font-size: 8px;
+      left: 0;
+      border-radius: 4px;
+    }
+    /* Mensaje de pausa */
+    .Mensaje_Pause {
+      font-size: 16px;
+    }
+    .GANASTE_PANTALLA h1 {
+      font-size: 12px;
+    }
+    .GANASTE_PANTALLA h3 {
+      font-size: 10px;
+    }
+  }
+  
+  /* RELOJ */
+  .Fecha {
+    display: flex;
+    width: fit-content;
+    padding: 0px 1rem;
+    margin-bottom: 3%;
+    height: 50px;
+    background: rgba(191, 44, 228, 0.274);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Fecha p {
+    font-size: 23px;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+  }
+  
+  .Hora {
+    display: flex;
+    height: fit-content;
+    padding: 1rem;
+    background: rgba(191, 44, 228, 0.274);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Hora p {
+    font-size: 50px;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    margin-block: 0;
+    line-height: 50px;
+  }
+  
+  #Caja_ULT {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 0px 4px;
+    vertical-align: baseline;
+  }
+  
+  #Segundos {
+    font-size: 50px;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    line-height: 50px;
+  }
+  
+  #AMPM {
+    font-size: 25px;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    align-self: flex-end;
+  }
+  
+  .Contenedor_Reloj {
+    left: 5%;
+  }
+  
+  /* BLOQUEO DE NIVELES */
+  #NIVEL_01 {
+    display: none;
+  }
+  
+  #NIVEL_02 {
+    display: none;
+  }
+  
+  #NIVEL3 {
+    display: none;
+  }
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1196px) {
+    .Imgane_metiorito {
+      width: 47%;
+      top: 16vw;
+    }
+  
+    .Boton_preparado {
+      width: 38%;
+    }
+  
+    .Titulo-Jugar {
+      font-size: 50px;
+    }
+  
+    .Contenedor_Historia {
+      top: 15vw;
+      font-size: 1.3vw;
+    }
+  }
+  
+/* Niveles de Juego */
+/* LVL 2 */
+/* ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO */
+/* .mensaje_dificultad_lvl2 {
+    display: flex;
+    flex-direction: column;
+} */
+.Contenedorlvl2 {
+    width: 800px;
+    height: 400px;
+    border: 5px dashed rgb(46, 86, 218);
+    background: url(IMG/Fondo.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    top: 4%;
     overflow: hidden;
 }
 
-@media screen and (max-width: 800px){
-    #Seccion_2{
-        box-sizing: border-box;
-        display: flex !important;
-        flex-direction: column;
-        padding: 0px 12px;
-        gap: 8px 0px;
-    }
-    .Titulo_historia{
-        position: static;
-        font-size: 28px;
-        text-align: center;
-        width: 100%;
-    }
-    .Imgane_metiorito{
-        position: static;
-        border-radius: 8px;
-        width: 100% !important;
-    }
-    .Contenedor_Historia{
-        box-sizing: border-box;
-        padding: 20px 12px;
-        float: none;
-        width: 100%;
-        position: static;
-        font-size: 12px !important;
-        border-radius: 8px;
-    }
-    .Listo{
-        width: 100%;
-        left: 0;
-        font-size: 20px;
-        border-radius: 8px;
-    }
-    .Boton_preparado{
-        font-size: 16px;
-        padding: 0px 12px;
+/* Pantalla start del inicio del juego */
+.Startlvl2 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.582);
+    position: absolute;
+    top: 0%;
+    z-index: 100000000000;
+    display: flex;
+    align-items: center;
+    gap: 12px 0px;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+/* Boton de la pantalla start */
+.Playlvl2 {
+    background: rgb(0, 119, 255);
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    left: 0px;
+    justify-content: center;
+    cursor: pointer;
+    transition: 2s;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
+    border-radius: 8px;
+}
+
+/* Titulo central de start */
+.Texolvl2 {
+    font-size: 24px;
+    left: 0px;
+    transition: 2s;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 50px;
+    margin-top: 0%;
+}
+
+#Dificultad {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition: 2s;
+    align-items: center;
+}
+
+#Dificultad h1 {
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#Contenedor_contadorlvl2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILOS DE LOS NUMEROS DEL COTEO EN START */
+#RGBlvl2 {
+    font-size: 220px;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    display: table-cell;
+    vertical-align: middle;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Responsividad lvl 2 */
+@media screen and (max-width: 600px) {
+    .Contenedorlvl2 {
+        width: 500px;
+        height: 350px;
     }
 }
 
-/*TERCERA SECCION------------------------------------------------------------------------------------------------------*/
-
-
-
-.Titulo-Jugar{text-align: center; /*TITULO DE LA ULTIMA SECCION*/
-font-family: 'Press Start 2P', cursive; text-align: center;
-font-size: 60px;position: relative; top: 0%; left: -110%; padding-bottom: 2%;}
-   
-
-.Tituloar_Juego_5 {font-family: 'Press Start 2P', cursive; text-align: center; font-size: 32px; margin-block: 0; margin-bottom:4px;}
-
-.Contenedor_Mensaje_Star{height: 100%; width: 100%; left: 0%;  background: transparent;
-display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; transition: 2.3s;}
-
-/*FONDO DE LA SECCION PRINCIPAL*/
-    .Seccion_Juego {width: 100%; height: 140vh; 
-        background-size: cover; display: flex;
-        align-items: center; justify-content: center;
-        flex-direction: column; position: absolute; top: -22%; left: -100%;  transition: 2s;       }
-        
-    /*ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO Nivel 1*/
-    .Contenedor {width: 800px; height: 400px; 
-        border: 5px dashed green; 
-        background: url(IMG/Fondo.jpg) no-repeat 50% 50%; 
-        background-size: cover; position: relative; top: 4%; overflow: hidden;  }
-
-    /* @media screen and (max-width: 600px){
-        .Contenedor {width: 500px; height: 350px;}
-    }
-    @media screen and (max-width: 360px){
-        .Contenedor {width: 320px; height: 180px;}
-        .Texo {font-size: 12px}
-    } */
-
-    /*CABEZARA DENTRO DEL JUEGO ***2***3****/
-    .Cabezera {height: 70px; 
-        border: 5px dashed green; 
-        background: rgba(255, 255, 255, 0.65); 
-        border-bottom: none; display: flex; 
-        align-items: center; position: relative; }
-        
-    /*Pantalla start del inicio del juego*/
-    .Start {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.582);
-        position: absolute; top: 0%; z-index: 100000000000; 
-        display: flex; align-items: center; 
-        justify-content: center; flex-direction: column; 
-        color: white; text-align: center;}
-        
-    /*Boton de la pantalla start*/
-    .Play {background: green; color: white;
-        width: fit-content; height: fit-content; display: flex; 
-        align-items: center;
-        padding: 12px 20px;
-        justify-content: center; cursor: pointer;transition: 2s;
-        font-family: 'Press Start 2P', cursive; margin: auto;
-        font-size: 28px;
-        border-radius: 8px;    
+@media screen and (max-width: 450px) {
+    /* Seccion_Juego */
+    .Seccion_Juego {
+        top: -32%;
     }
 
-
-        
-    /*TITULO CENTRAL DE START*/
-    .Texo {font-size: 24px;
-        left: 0px;  transition: 2s;
-        font-family: 'Press Start 2P', cursive;
-        line-height: 70px; margin-top: 0% ;}
-
-    .Pollo{font-family: 'Press Start 2P', cursive; display: flex;align-items: center;}
-
-        
-    #Contenedor_contador {height: 100%; 
-        display: table; position: absolute;}
-        
-    /*ESTILOS DE LOS NUMEROS DEL COTEO EN START*/
-    #RGB {font-size: 220px; position: relative; 
-        font-family: 'Press Start 2P', cursive;
-        display: table-cell; vertical-align: middle; }
-
-
-    /* Mensaje responsivo */
-
-    @media screen and (max-width: 600px){
-        .Contenedor {width: 500px; height: 350px;}
-        .Cabezera{
-            height: fit-content;
-            padding: 8px 0px;
-        }
+    /* Titulo pantalla juego */
+    .Tituloar_Juego_5 {
+        font-size: 18px;
+        margin-bottom: 12px;
     }
-    @media screen and (max-width: 450px){
-        /*Seccion_Juego*/
-        .Seccion_Juego{
-            top: -32%;
-        }
 
-        /* Titulo pantalla juego */
-        .Tituloar_Juego_5{
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-
-        /* Canvas */
-        .Contenedor {width: 340px; height: 180px;}
-        .Cabezera{
-            height: fit-content;
-            padding: 8px 0px;
-        }
-        .Texo {
-            padding-top: 12px;
-            line-height: 14px;
-            font-size: 12px
-        }
-        .Pollo{
-            font-size: 10px;
-        }
-        .Play{
-            font-size: 12px;
-        }
-        #RGB{
-            font-size: 50px;
-        }
+    /* Canvas */
+    .Contenedorlvl2 {
+        width: 340px;
+        height: 180px;
     }
-        
-    /*PANTALLA DE PAUSE*/
-    .Pausa_Pantalla {position: absolute; top: 0%; width: 100%;
-        height: 100%; background: rgba(0, 0, 0, 0.541);
-        text-align: center; z-index: 1000000000; display: none;}
-
-    .GANASTE_PANTALLA {position: absolute; width: 100%; height: 100%; background: rgba(47, 255, 57, 0.63);
-        z-index: 900; top: 0%; display: flex; justify-content: center; align-items: center; flex-direction: column; display: none;}
-
-    .GANASTE_PANTALLA h1 {font-family: 'Press Start 2P', cursive; color: rgb(10, 90, 16);
-        text-align: center; font-size: 2rem;}
-
-    .GANASTE_PANTALLA h3 {text-align: center; padding-left: 10%; padding-right: 10%; color: rgb(0, 0, 0);
-        font-family: 'Press Start 2P', cursive;}
-        
-    #Sin_Audio {display: none; font-size: 20px; color: white;}
-
-    #Ganaste_audio {font-size: 20px; color: white;}
-
-        /*ESTILOS GENERALES DE LOS METIORITOS*/
-    .Meteiorito {cursor: pointer; display: table; 
-        position: absolute; z-index: 1000; }
-        
-        /*ESTILOS INDIVIDUALES DE MIS DOS METIORITOS*/
-    #Meteiorito{position: absolute; top: 0px; left: -10%;  transition: 2.4s;}
-    #Meteiorito2{position: absolute; top: 0px; left: -10%; transition: 2.4s;}
-        
-        /*ESTILO DEL PLANETA*/
-    .Planeta {position: absolute; top: 12%; left: 80%;
-            animation-name: rotation;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-        
-        @keyframes rotation {
-        0% {
-            transform:rotate(0deg);
-        }
-        100% {
-            transform:rotate(360deg);
-        }
-        }
-        
-        /*ESTILO DEL LIMITE EN EL JUEGO*/
-    .Limite {height: 100%; width: 50px;
-        border-left: 5px dashed white; 
-        position: absolute; top: 0%; left: 70%;}
-        
-        /*ESTILOS DEL SPAN Y DEL TEXTO DE TIEMPO*/
-    .Tiempo {display: flex; align-items: center;
-        flex-direction: column;
-        width: 14%; height: 70%; color: rgb(0, 0, 0); 
-        font-size: 13px; line-height: 1vh ; font-family: 'Press Start 2P', cursive; }
-        
-        /*ESTILOS DEL SPAN Y DEL TEXTO DE PUNTAJE*/
-    .Puntaje {display: flex; align-items: center; 
-        flex-direction: column; 
-        width: 14%; height: 70%; color: rgb(0, 0, 0); 
-        font-size: 13px; line-height: 7px; font-family: 'Press Start 2P', cursive; }
-        
-        /*ESTILOS DEL BOTON DE PAUSE*/
-    .Pause {width: fit-content; height: 70%; font-size: 14px;
-        padding: 0px 12px;
-        border-radius: 4px;
-        background: green; display: flex;
-        align-items: center; justify-content: center;
-        color: white; cursor: pointer; position: relative;
-        left: 46%; }
-        
-        /*MENSAJE DENTRO DE PAUSE*/
-    .Mensaje_Pause{font-size: 50px; color: white;
-        display: table-cell; vertical-align: middle;
-        font-family: 'Press Start 2P', cursive;}
-
-    
-.NEXT {width: 15vw; height: 3vw; background: purple; font-size: 0.9vw; display: flex; align-items: center; justify-content: center; cursor: pointer; float: right;
-margin-left: 12%;
-font-size: 12px;
-height: fit-content;
-padding: 0px 12px;
-border-radius: 8px;}
-
-.Contenedor_LVL{display: flex; justify-content: center; align-items: end; width: 100%; position: relative; top: 4%;}
-.Nada {width: 45vw; height: auto; background: rgba(191, 44, 228, 0.274); border: 2px solid purple; color: white; position: relative; left: 6%;  }
-.Nada h2 {padding-left: 3%; padding-right: 3%; font-size: 16px;}
-.Nada p {padding-left: 3%; padding-right: 3%; font-size: 14px;}
-
-@media screen and (max-width:750px) {
-    /* Instrucciones y hora */
-    .Contenedor_LVL{
-        flex-direction: column;
-        top:2%;
-        gap:20px;
-        align-items:center ;
-    }
-    .Nada{
-        width: 85%;
-        left:0%
-    }
-    .Nada h2 {font-size: 16px;}
-    .Nada p {font-size: 12px;}
-    .NEXT{
-        margin-left: 0;
+    .Texolvl2 {
+        padding-top: 12px;
+        line-height: 14px;
         font-size: 12px;
-        height: fit-content;
-        width: 80%;
-        padding: 0px 12px;
-        border-radius: 8px;
     }
+    .Startlvl2 {
+        gap: 0px;
+    }
+    #Dificultad h1 {
+        font-size: 10px;
+    }
+    .Playlvl2 {
+        font-size: 12px;
+    }
+    #RGBlvl2 {
+        font-size: 50px;
+    }
+}
 
+/* PANTALLA DE PAUSE */
+.Pausa_Pantallalvl2 {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.541);
+    text-align: center;
+    z-index: 1000000000;
+    display: none;
+}
+
+.GanastePantallaLvL2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 255, 57, 0.63);
+    z-index: 900;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.GanastePantallaLvL2 h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(10, 90, 16);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.GanastePantallaLvL2 h3 {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: rgb(0, 0, 0);
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ESTILOS GENERALES DE LOS METIORITOS */
+.Meteioritolvl2 {
+    cursor: pointer;
+    display: table;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* ESTILOS INDIVIDUALES DE MIS DOS METIORITOS */
+#Meteioritolvl2 {
+    top: 0%;
+    position: absolute;
+    left: -30%;
+    transition: 2s;
+}
+#Meteiorito2lvl2 {
+    top: 0%;
+    position: absolute;
+    left: -30%;
+    transition: 2s;
+}
+#Meteiorito3lvl2 {
+    top: 0%;
+    position: absolute;
+    left: -30%;
+    transition: 2s;
+}
+
+/* ESTILO DEL PLANETA */
+.Planetalvl2 {
+    position: absolute;
+    top: 12%;
+    left: 80%;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ESTILO DEL LIMITE EN EL JUEGO */
+.Limitelvl2 {
+    height: 100%;
+    width: 50px;
+    border-left: 5px dashed white;
+    position: absolute;
+    top: 0%;
+    left: 70%;
+}
+
+/* CABEZARA DENTRO DEL JUEGO */
+.Cabezeralvl2 {
+    height: 70px;
+    border: 5px dashed rgb(0, 119, 255);
+    background: rgba(255, 255, 255, 0.65);
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* ESTILOS DEL SPAN Y DEL TEXTO DE TIEMPO */
+.Tiempolvl2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 14%;
+    height: 70%;
+    color: black;
+    font-size: 13px;
+    line-height: 1vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ESTILOS DEL SPAN Y DEL TEXTO DE PUNTAJE */
+.Puntajelvl2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 14%;
+    height: 70%;
+    color: black;
+    font-size: 13px;
+    line-height: 1vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ESTILOS DEL BOTON DE PAUSE */
+.Pauselvl2 {
+    width: content;
+    height: 70%;
+    font-size: 14px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    background: rgb(0, 119, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 46%;
+}
+
+/* MENSAJE DENTRO DE PAUSE */
+.Mensaje_Pauselvl2 {
+    font-size: 50px;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Alerta */
+.Perdistelvl2 {
+    color: aqua;
+}
+
+.Aumentarpuntoslvl2 {
+    color: black;
+}
+
+@media screen and (max-width: 750px) {
     /* mensaje de pausa */
-    .Mensaje_Pause{
+    .Cabezeralvl2 {
+        height: fit-content;
+        padding: 8px 0px;
+    }
+    .Mensaje_Pauselvl2 {
         font-size: 32px;
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
     /* Cabecera y puntaje */
-    .Cabezera{
+    .Cabezeralvl2 {
+        height: fit-content;
+        padding: 8px 0px;
         display: flex;
         justify-content: space-around;
     }
-    .Tiempo{
+    .Tiempolvl2 {
         width: fit-content;
         font-size: 8px;
     }
-    .Puntaje{
+    .Puntajelvl2 {
         width: fit-content;
         font-size: 8px;
     }
-    .Pause{
+    .Pauselvl2 {
         width: fit-content;
-        padding:2px 12px ;
+        padding: 2px 12px;
         font-size: 8px;
         left: 0;
         border-radius: 4px;
     }
     /* mensaje de pausa */
-    .Mensaje_Pause{
+    .Mensaje_Pauselvl2 {
         font-size: 16px;
     }
-    .GANASTE_PANTALLA h1{
+    .GanastePantallaLvL2 h1 {
         font-size: 12px;
     }
-    .GANASTE_PANTALLA h3{
+    .GanastePantallaLvL2 h3 {
         font-size: 10px;
     }
 }
 
-/*RELOJ*/
-.Fecha {display: flex; width:fit-content; padding: 0px 1rem; margin-bottom: 3%;
-    height: 50px; background: rgba(191, 44, 228, 0.274);
-    justify-content: center; align-items: center;
-    }
-    
-.Fecha p {font-size: 23px; color: white; font-family: 'Inconsolata', monospace;}
-    
-.Hora {
-        display: flex; height: fit-content;
-        padding: 1rem;
-        background: rgba(191, 44, 228, 0.274);
-        align-items: center; justify-content: center;
-    }
-    
-.Hora p {font-size: 50px; color: white; font-family: 'Inconsolata', monospace; margin-block: 0; line-height: 50px;}
-    
-    
-#Caja_ULT {height: fit-content; width: fit-content; display: flex;
-    justify-content: center; gap: 0px 4px;vertical-align: baseline
-      }
+ /* TERCER NIVEL */
 
-#Segundos{font-size: 50px; color: white; font-family: 'Inconsolata', monospace; line-height: 50px;}
-    
-#AMPM {font-size: 25px; color: white; font-family: 'Inconsolata', monospace; align-self: flex-end;}
-    
-.Contenedor_Reloj { left: 5%; 
-    }
-/*BLOQUEO DE NIVELES*/
-#NIVEL_01 {display: none;}
-#NIVEL_02 {display: none;}
-#NIVEL3 {display: none;}
-
-
-
-/*RESPONSIVE */
-@media (max-width: 1196px){
-    .Imgane_metiorito{width: 47%; top: 16vw;}
-    .Boton_preparado{width: 38%;}
-    .Titulo-Jugar {font-size: 50px;}
-    .Contenedor_Historia{top: 15vw; font-size: 1.3vw;}
-    
+/* ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO */
+.Contenedorlvl3 {
+    width: 800px;
+    height: 400px;
+    border: 5px dashed red;
+    background: url(IMG/Fondo.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    top: 4%;
+    overflow: hidden;
 }
 
-
-/*LVL 2 ---------------------------------------------------------------------------------------------------------*/
-
-
-    
-    /*ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO*/
-    /* .mensaje_dificultad_lvl2{
-        display: flex;
-        flex-direction: column;
-    } */
-    .Contenedorlvl2 {width: 800px; height: 400px; 
-    border: 5px dashed rgb(46, 86, 218); 
-    background: url(IMG/Fondo.jpg) no-repeat 50% 50%;
-    background-size: cover; position: relative; top: 4%; overflow: hidden;}
-    
-    /*Pantalla start del inicio del juego*/
-    .Startlvl2 {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.582);
-    position: absolute; top: 0%; z-index: 100000000000; 
-    display: flex; align-items: center;gap: 12px 0px; flex-direction: column; 
-    color: white; text-align: center;}
-    
-    /*Boton de la pantalla start*/
-    .Playlvl2 {background: rgb(0, 119, 255); color: white;
-    width: fit-content; height: fit-content; display: flex; 
-    align-items: center;padding: 8px 20px; left: 0px;
-    justify-content: center; cursor: pointer;
-    transition: 2s;
-    font-family: 'Press Start 2P', cursive; font-size: 28px;
-    border-radius: 8px;  }
-    
-    /*TITULO CENTRAL DE START*/
-    .Texolvl2 {font-size: 24px;
-        left: 0px; transition: 2s;
-        font-family: 'Press Start 2P', cursive;
-        line-height: 50px; margin-top: 0% ;}
-
-    #Dificultad {display: flex; 
-    justify-content: center; width: 100%; transition: 2s; align-items: center;}
-
-    #Dificultad h1{
-        font-size: 20px; font-family: 'Press Start 2P', cursive;
-    }
-    
-    #Contenedor_contadorlvl2 {height: 100%; width: 100%; 
-    display: flex; position: absolute; justify-content: center; align-items: center;}
-    
-    /*ESTILOS DE LOS NUMEROS DEL COTEO EN START*/
-    #RGBlvl2 {font-size: 220px; position: relative; 
-    font-family: 'Press Start 2P', cursive;
-    display: table-cell; vertical-align: middle; align-self: center; justify-self: center; }
-
-    /* Responsividad lvl 2*/
-
-    @media screen and (max-width: 600px){
-        .Contenedorlvl2 {width: 500px; height: 350px;}
-    }
-    @media screen and (max-width: 450px){
-        /*Seccion_Juego*/
-        .Seccion_Juego{
-            top: -32%;
-        }
-
-        /* Titulo pantalla juego */
-        .Tituloar_Juego_5{
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-
-        /* Canvas */
-        .Contenedorlvl2 {width: 340px; height: 180px;}
-        .Texolvl2 {
-            padding-top: 12px;
-            line-height: 14px;
-            font-size: 12px
-        }
-        .Startlvl2{
-            gap: 0px;
-        }
-        #Dificultad h1{
-            font-size: 10px;
-        }
-        .Playlvl2{
-            font-size: 12px;
-        }
-        #RGBlvl2{
-            font-size: 50px;
-        }
-    }
-    
-    /*PANTALLA DE PAUSE*/
-    .Pausa_Pantallalvl2 {position: absolute; top: 0%; width: 100%;
-    height: 100%; background: rgba(0, 0, 0, 0.541);
-    text-align: center; z-index: 1000000000; display: none;}
-    
-    .GanastePantallaLvL2 {position: absolute; width: 100%; height: 100%; background: rgba(47, 255, 57, 0.63);
-        z-index: 900; top: 0%; display: flex; justify-content: center; align-items: center; flex-direction: column; display: none;}
-    
-    .GanastePantallaLvL2 h1 {font-family: 'Press Start 2P', cursive; color: rgb(10, 90, 16);
-        text-align: center; font-size: 2rem;}
-    
-    .GanastePantallaLvL2 h3 {text-align: center; padding-left: 10%; padding-right: 10%; color: rgb(0, 0, 0);
-        font-family: 'Press Start 2P', cursive;}
-
-
-    /*ESTILOS GENERALES DE LOS METIORITOS*/
-    .Meteioritolvl2 {cursor: pointer; display: table; 
-    position: absolute; z-index: 1000; }
-    
-    /*ESTILOS INDIVIDUALES DE MIS DOS METIORITOS*/
-    #Meteioritolvl2{top: 0%; position: absolute; left: -30%; transition: 2s;}
-    #Meteiorito2lvl2{ top: 0%; position: absolute; left: -30%; transition: 2s;}
-    #Meteiorito3lvl2{top: 0%; position: absolute; left: -30%; transition: 2s;}
-    /*ESTILO DEL PLANETA*/
-    .Planetalvl2 {position: absolute; top: 12%; left: 80%;
-        animation-name: rotation;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-    
-    @keyframes rotation {
-      0% {
-        transform:rotate(0deg);
-      }
-      100% {
-        transform:rotate(360deg);
-      }
-    }
-    
-    /*ESTILO DEL LIMITE EN EL JUEGO*/
-    .Limitelvl2 {height: 100%; width: 50px;
-    border-left: 5px dashed white; 
-    position: absolute; top: 0%; left: 70%;}
-    
-    /*CABEZARA DENTRO DEL JUEGO*/
-    .Cabezeralvl2 {height: 70px; 
-    border: 5px dashed rgb(0, 119, 255); 
-    background: rgba(255, 255, 255, 0.65); 
-    border-bottom: none; display: flex; 
-    align-items: center; position: relative; }
-    
-    /*ESTILOS DEL SPAN Y DEL TEXTO DE TIEMPO*/
-    .Tiempolvl2 {display: flex; align-items: center;
-        flex-direction: column;
-        width: 14%; height: 70%; color: black; 
-        font-size: 13px; line-height: 1vh ; font-family: 'Press Start 2P', cursive;  }
-    
-    /*ESTILOS DEL SPAN Y DEL TEXTO DE PUNTAJE*/
-    .Puntajelvl2 {display: flex; align-items: center; 
-     flex-direction: column;
-    width: 14%; height: 70%; color: black; 
-    font-size: 13px; line-height: 1vh;font-family: 'Press Start 2P', cursive; }
-    
-    /*ESTILOS DEL BOTON DE PAUSE*/
-    .Pauselvl2 {width: content; height: 70%; font-size: 14px;
-    padding: 0px 12px; border-radius: 4px;
-    background: rgb(0, 119, 255); display: flex;
-    align-items: center; justify-content: center;
-    color: white; cursor: pointer; position: relative;
-    left: 46%; }
-    
-    /*MENSAJE DENTRO DE PAUSE*/
-    .Mensaje_Pauselvl2{font-size: 50px; color: white; display: table-cell; vertical-align: middle; font-family: 'Press Start 2P', cursive;}
-    
-    /*Alerta*/
-    .Perdistelvl2 {
-     color:aqua;
-     
-    }
-    .Aumentarpuntoslvl2 {
-     color: black;
-    
-    
-    }
-    @media screen and (max-width:750px) {
-        /* mensaje de pausa */
-        .Cabezeralvl2{
-            height: fit-content;
-            padding: 8px 0px;
-        }
-        .Mensaje_Pauselvl2{
-            font-size: 32px;
-        }
-    }
-    
-    @media screen and (max-width: 450px){
-        /* Cabecera y puntaje */
-        .Cabezeralvl2{
-            height: fit-content;
-            padding: 8px 0px;
-            display: flex;
-            justify-content: space-around;
-        }
-        .Tiempolvl2{
-            width: fit-content;
-            font-size: 8px;
-        }
-        .Puntajelvl2{
-            width: fit-content;
-            font-size: 8px;
-        }
-        .Pauselvl2{
-            width: fit-content;
-            padding:2px 12px ;
-            font-size: 8px;
-            left: 0;
-            border-radius: 4px;
-        }
-        /* mensaje de pausa */
-        .Mensaje_Pauselvl2{
-            font-size: 16px;
-        }
-        .GanastePantallaLvL2 h1{
-            font-size: 12px;
-        }
-        .GanastePantallaLvL2 h3{
-            font-size: 10px;
-        }
-    }
-    /*TERCER NIVEL ----------------------------------------------------------------------------------------*/
-
-
-    
-    /*ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO*/
-    .Contenedorlvl3 {
-        width: 800px; 
-        height: 400px; 
-        border: 5px dashed red; 
-        background: url(IMG/Fondo.jpg) no-repeat 50% 50% ;
-        background-size: cover;
-        position: relative;
-        top: 4%;
-        overflow: hidden;
-    }
-    
-    /*Pantalla start del inicio del juego*/
-    .Startlvl3 {
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.582);
-        position: absolute;
-        top: 0%;
-        z-index: 100000000000; 
-        display: flex;
-        align-items: center; 
-        gap: 12px 0px;
-        flex-direction: column; 
-        color: white;
-        text-align: center;
-        justify-content: space-evenly;
-    }
-    
-    /*Boton de la pantalla start*/
-    .Playlvl3 {
-        background: red;
-        color: white;
-        width:  fit-content;
-        height:  fit-content;
-        display: flex; 
-        align-items: center;
-        padding: 8px 20px;
-        left: 0;
-        justify-content: center;
-        cursor: pointer;
-        transition: 2s;
-        font-family: 'Press Start 2P', cursive;
-        font-size: 28px;
-        border-radius: 8px;
-    }
-    
-    #Dificultadlvl3{display: flex;
-    justify-content: center; width: 100%;
-    left: 0%; transition: 5s;
+/* Pantalla start del inicio del juego */
+.Startlvl3 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.582);
+    position: absolute;
+    top: 0%;
+    z-index: 100000000000;
+    display: flex;
     align-items: center;
+    gap: 12px 0px;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+/* Boton de la pantalla start */
+.Playlvl3 {
+    background: red;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    left: 0;
+    justify-content: center;
+    cursor: pointer;
+    transition: 2s;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
+    border-radius: 8px;
+}
+
+#Dificultadlvl3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0%;
+    transition: 5s;
+    align-items: center;
+}
+
+#Dificultadlvl3 h1 {
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Titulo central de start */
+.Textolvl3 {
+    font-size: 24px;
+    left: 0px;
+    transition: 2s;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 50px;
+    margin-top: 0%;
+}
+
+#Contenedor_contadorlvl3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILOS DE LOS NUMEROS DEL COTEO EN START */
+#RGBlvl3 {
+    font-size: 220px;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Responsividad lvl 3 */
+@media screen and (max-width: 600px) {
+    .Contenedorlvl3 {
+        width: 500px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* Seccion_Juego */
+    .Seccion_Juego {
+        top: -32%;
     }
 
-    #Dificultadlvl3 h1{
-        font-size: 24px; 
-        font-family: 'Press Start 2P', cursive;
+    /* Titulo pantalla juego */
+    .Tituloar_Juego_5 {
+        font-size: 18px;
+        margin-bottom: 12px;
     }
 
-    /*TITULO CENTRAL DE START*/
+    /* Canvas */
+    .Contenedorlvl3 {
+        width: 340px;
+        height: 180px;
+    }
     .Textolvl3 {
-        font-size: 24px;
-        left: 0px; 
-        transition: 2s;
-        font-family: 'Press Start 2P', cursive;
-        line-height: 50px;
-        margin-top: 0%;
+        padding-top: 12px;
+        line-height: 14px;
+        font-size: 12px;
     }
-    
-    #Contenedor_contadorlvl3 {
-        height: 100%; 
-        width: 100%; 
-        display: flex; 
-        position: absolute;
-        justify-content: center; 
-        align-items: center;
+    .Startlvl3 {
+        gap: 0px;
     }
-    
-    /*ESTILOS DE LOS NUMEROS DEL COTEO EN START*/
+    #Dificultad h1 {
+        font-size: 10px;
+    }
+    .Playlvl3 {
+        font-size: 12px;
+    }
     #RGBlvl3 {
-        font-size: 220px;
-        position: relative; 
-        font-family: 'Press Start 2P', cursive;
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    /* Responsividad lvl 3*/
-
-    @media screen and (max-width: 600px){
-        .Contenedorlvl3 {width: 500px; height: 350px;}
-    }
-    @media screen and (max-width: 450px){
-        /*Seccion_Juego*/
-        .Seccion_Juego{
-            top: -32%;
-        }
-
-        /* Titulo pantalla juego */
-        .Tituloar_Juego_5{
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-
-        /* Canvas */
-        .Contenedorlvl3 {width: 340px; height: 180px;}
-        .Textolvl3 {
-            padding-top: 12px;
-            line-height: 14px;
-            font-size: 12px
-        }
-        .Startlvl3{
-            gap: 0px;
-        }
-        #Dificultad h1{
-            font-size: 10px;
-        }
-        .Playlvl3{
-            font-size: 12px;
-        }
-        #RGBlvl3{
-            font-size: 50px;
-        }
-    }
-    
-    /*PANTALLA DE PAUSE*/
-    .Pausa_Pantallalvl3 {
-        position: absolute;
-        top: 0%;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.541);
-        text-align: center;
-        z-index: 1000000000;
-        display: none;
-    }
-    
-    /*ESTILOS GENERALES DE LOS METIORITOS*/
-    .Meteoritolvl3 {
-        cursor: pointer;
-        display: table; 
-        position: absolute;
-        top: 0%;
-        z-index: 1000;
-    }
-    
-    /*ESTILOS INDIVIDUALES DE MIS TRES METIORITOS*/
-    #Meteoritolvl3{
-        top: 0%;
-        left: -10%;
-        transition: 1s;
-    }
-    
-    #Meteorito2lvl3{
-        top: 0%;
-        position: absolute;
-        left: -10%;
-        transition: 2s;
-    }
-    
-    #Meteorito3lvl3{
-        top: 0%;
-        position: absolute;
-        left: -10%;
-        transition: 3s;
-    }
-    
-    #Meteorito4lvl3{
-        top: 0%;
-        position: absolute;
-        left: -10%;
-        transition: 4s;
-    }
-    
-    
-    /*ESTILO DEL PLANETA*/
-    .Planetalvl3{
-        position: absolute;
-        top: 12%;
-        left: 80%;
-        animation-name: rotation;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-    
-    @keyframes rotation {
-      0% {
-        transform:rotate(0deg);
-      }
-      100% {
-        transform:rotate(360deg);
-      }
-    }
-    
-    
-    /*ESTILO DEL LIMITE EN EL JUEGO*/
-    .Limitelvl3 {
-        height: 100%;
-        width: 50px;
-        border-left: 5px dotted white; 
-        position: absolute;
-        top: 0%;
-        left: 70%;
-    }
-    
-    /*CABEZARA DENTRO DEL JUEGO*/
-    .Cabezeralvl3 {height: 70px; 
-        border: 5px dashed red; 
-        background: rgba(255, 255, 255, 0.65); 
-        border-bottom: none; display: flex; 
-        position: relative; align-items: center;}
-    
-    /*ESTILOS DEL SPAN Y DEL TEXTO DE TIEMPO*/
-    .Tiempolvl3 {
-        display: flex; align-items: center; justify-content: center;
-        flex-direction: column;
-        width: 14%; height: 70%; color: black; 
-        font-size: 13px; line-height: 1vh ; font-family: 'Press Start 2P', cursive;
-    }
-    
-    /*ESTILOS DEL SPAN Y DEL TEXTO DE PUNTAJE*/
-    .Puntajelvl3 {
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-        flex-direction: column; 
-        width: 14%;
-        height: 86%;
-        color: black;
-        font-size: 13px;
-        line-height: 1vh;
-        font-family: 'Press Start 2P', cursive;
-    }
-    /*ESTILOS DEL BOTON DE PAUSE*/
-    .Pauselvl3{
-        width: content;
-        height: 70%;
-        font-size: 14px;
-        padding: 0px 12px;
-        border-radius: 4px;
-        background: red;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        cursor: pointer;
-        position: relative;
-        left: 46%;
-    }
-    
-    /*MENSAJE DENTRO DE PAUSE*/
-    .Mensaje_Pauselvl3{
         font-size: 50px;
-        color: white;
-        display: table-cell;
-        vertical-align: middle;
-        font-family: 'Press Start 2P', cursive;
     }
-    @media screen and (max-width:750px) {
-        /* mensaje de pausa */
-        .Cabezeralvl3{
-            height: fit-content;
-            padding: 8px 0px;
-        }
-        .Mensaje_Pauselvl3{
-            font-size: 32px;
-        }
+}
+
+/* PANTALLA DE PAUSE */
+.Pausa_Pantallalvl3 {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.541);
+    text-align: center;
+    z-index: 1000000000;
+    display: none;
+}
+
+/* ESTILOS GENERALES DE LOS METIORITOS */
+.Meteoritolvl3 {
+    cursor: pointer;
+    display: table;
+    position: absolute;
+    top: 0%;
+    z-index: 1000;
+}
+
+/* ESTILOS INDIVIDUALES DE MIS TRES METIORITOS */
+#Meteoritolvl3 {
+    top: 0%;
+    left: -10%;
+    transition: 1s;
+}
+
+#Meteorito2lvl3 {
+    top: 0%;
+    position: absolute;
+    left: -10%;
+    transition: 2s;
+}
+
+#Meteorito3lvl3 {
+    top: 0%;
+    position: absolute;
+    left: -10%;
+    transition: 3s;
+}
+
+#Meteorito4lvl3 {
+    top: 0%;
+    position: absolute;
+    left: -10%;
+    transition: 4s;
+}
+
+/* ESTILO DEL PLANETA */
+.Planetalvl3 {
+    position: absolute;
+    top: 12%;
+    left: 80%;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
     }
-    @media screen and (max-width: 450px){
-        /* Cabecera y puntaje */
-        .Cabezeralvl3{
-            height: fit-content;
-            padding: 8px 0px;
-            display: flex;
-            justify-content: space-around;
-        }
-        .Tiempolvl3{
-            width: fit-content;
-            font-size: 8px;
-        }
-        .Puntajelvl3{
-            width: fit-content;
-            font-size: 8px;
-        }
-        .Pauselvl3{
-            width: fit-content;
-            padding:2px 12px ;
-            font-size: 8px;
-            left: 0;
-            border-radius: 4px;
-        }
-        /* mensaje de pausa */
-        .Mensaje_Pauselvl3{
-            font-size: 16px;
-        }
+    100% {
+        transform: rotate(360deg);
     }
-    
-    /*ESTILOS DE LA SORPRESA*/
-    .Pantalla_navelvl3 {
+}
+
+/* ESTILO DEL LIMITE EN EL JUEGO */
+.Limitelvl3 {
+    height: 100%;
+    width: 50px;
+    border-left: 5px dotted white;
+    position: absolute;
+    top: 0%;
+    left: 70%;
+}
+
+/* CABEZARA DENTRO DEL JUEGO */
+.Cabezeralvl3 {
+    height: 70px;
+    border: 5px dashed red;
+    background: rgba(255, 255, 255, 0.65);
+    border-bottom: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+/* ESTILOS DEL SPAN Y DEL TEXTO DE TIEMPO */
+.Tiempolvl3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 14%;
+    height: 70%;
+    color: black;
+    font-size: 13px;
+    line-height: 1vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ESTILOS DEL SPAN Y DEL TEXTO DE PUNTAJE */
+.Puntajelvl3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 14%;
+    height: 86%;
+    color: black;
+    font-size: 13px;
+    line-height: 1vh;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ESTILOS DEL BOTON DE PAUSE */
+.Pauselvl3 {
+    width: content;
+    height: 70%;
+    font-size: 14px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 46%;
+}
+
+/* MENSAJE DENTRO DE PAUSE */
+.Mensaje_Pauselvl3 {
+    font-size: 50px;
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@media screen and (max-width: 750px) {
+    /* mensaje de pausa */
+    .Cabezeralvl3 {
+        height: fit-content;
+        padding: 8px 0px;
+    }
+    .Mensaje_Pauselvl3 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* Cabecera y puntaje */
+    .Cabezeralvl3 {
+        height: fit-content;
+        padding: 8px 0px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        left: -100%;
-        top: 0;
+        justify-content: space-around;
     }
-    
-    .Pantalla_Nodrizalvl3 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        left: -100%;
-        top: 32%;
+    .Tiempolvl3 {
+        width: fit-content;
+        font-size: 8px;
     }
-    
-    .Pantalla_nave2lvl3 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        left: -100%;
-        top: 63%;
+    .Puntajelvl3 {
+        width: fit-content;
+        font-size: 8px;
     }
-    
-    .Ovnislvl3 {
-        width: 84px;
-        transform: rotate(90deg);
+    .Pauselvl3 {
+        width: fit-content;
+        padding: 2px 12px;
+        font-size: 8px;
+        left: 0;
+        border-radius: 4px;
     }
-    
-    #Nodrizalvl3 {
-        width: 140px;
-        transform: rotate(90deg);
+    /* mensaje de pausa */
+    .Mensaje_Pauselvl3 {
+        font-size: 16px;
     }
-    
-    
-    
-    #Pantalla_creditoslvl3 {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        transition: 2s;
-    }
-    
-    #Creditoslvl3 {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        top: -100%;
-        font-size: 26px;
-        color: snow;
-        line-height: 8px;
-    }
-    
-    #Proximolvl3 {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        bottom: -100%;
-        font-size: 30px;
-        color: snow;
-        line-height: 5px;
-        line-height: 8px;
-    }
-    
-    #Proximolvl3 h4 {
-        font-family: 'Press Start 2P', cursive;
-        line-height: 5px;
-    }
-    
-    #Creditoslvl3 h3 {
-        font-family: 'Press Start 2P', cursive;
-    }
-    
-    #Creditoslvl3 p {
-        font-family: 'Press Start 2P', cursive;
-    }
-    
-    
+}
+
+/* ESTILOS DE LA SORPRESA */
+.Pantalla_navelvl3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: -100%;
+    top: 0;
+}
+
+.Pantalla_Nodrizalvl3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: -100%;
+    top: 32%;
+}
+
+.Pantalla_nave2lvl3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: -100%;
+    top: 63%;
+}
+
+.Ovnislvl3 {
+    width: 84px;
+    transform: rotate(90deg);
+}
+
+#Nodrizalvl3 {
+    width: 140px;
+    transform: rotate(90deg);
+}
+
+#Pantalla_creditoslvl3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 2s;
+}
+
+#Creditoslvl3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: -100%;
+    font-size: 26px;
+    color: snow;
+    line-height: 8px;
+}
+
+#Proximolvl3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: -100%;
+    font-size: 30px;
+    color: snow;
+    line-height: 5px;
+    line-height: 8px;
+}
+
+#Proximolvl3 h4 {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 5px;
+}
+
+#Creditoslvl3 h3 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#Creditoslvl3 p {
+    font-family: 'Press Start 2P', cursive;
+}
