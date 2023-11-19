@@ -6,22 +6,20 @@ let swalWidth= ()=>{
 }
 
 Swal.fire({
-    title:
-      '¿Preparado para salvar el mundo? <br><br> <img src="IMG/planeta_tierra.png" width = "120px"><br>',
-    html: '"Iron Fist” es un juego diseñado para mejorar tus reflejos con cada nivel que superes. Cada avance te presenta desafíos cada vez mayores, desbloqueando logros significativos al final de cada etapa. Esperamos que te diviertas y disfrutes de la emoción que este increíble juego tiene para ofrecer.',
-    icon: "sucess",
-    confirmButtonText: "ESTOY PREPARADO",
-    width: swalWidth,
-    height: "80%",
-    timer: 100000,
-  
-    timerProgressbar: true,
-    /*Funcion de cerrar la alerta*/
-    allowOutsideClick: true,
-    allowEscapeKey: false,
-    allowEnterkey: false,
-    stopKeydownPropagation: false,
-  });
+  title: '¿Preparado para salvar el mundo? <br><br> <img src="IMG/planeta_tierra.png" width="120px"><br>',
+  html: '"Iron Fist” es un juego diseñado para mejorar tus reflejos con cada nivel que superes. Cada avance te presenta desafíos cada vez mayores, desbloqueando logros significativos al final de cada etapa. Esperamos que te diviertas y disfrutes de la emoción que este increíble juego tiene para ofrecer.',
+  icon: "success",
+  confirmButtonText: "ESTOY PREPARADO",
+  width: swalWidth,
+  height: "80%",
+  timer: 100000,
+  timerProgressBar: true,
+  /* Funcion de cerrar la alerta */
+  allowOutsideClick: true,
+  allowEscapeKey: false,
+  allowEnterKey: false,
+  stopKeyDownPropagation: false,
+});
 
 Tiempo = 71; //VARIBLE DE INICIO TIEMPO
 Puntaje = 0; //VARIABLE DE INICIO PUNTOS
